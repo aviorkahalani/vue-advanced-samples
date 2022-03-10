@@ -12,6 +12,7 @@ This template should help get you started developing with Vue 3 in Vite.
 - vitest (unit-testing)
 - animations
 - dynamic components
+- deployment to gh-pages
 
 ## Recommended IDE Setup
 
