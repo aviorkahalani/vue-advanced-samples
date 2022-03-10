@@ -12,6 +12,11 @@ export default {
   created() {
     this.$store.dispatch({ type: 'loadCars' })
   },
+  methods: {
+    clicked() {
+      alert('I got clicked!')
+    },
+  },
   components: {
     appHeader,
   },

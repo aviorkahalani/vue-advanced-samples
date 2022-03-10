@@ -10,6 +10,14 @@ export const rainbowDirective = {
   },
 }
 
+export const customOnDirective = {
+  mounted(el, binding) {
+    const type = binding.arg
+    const fn = binding.value
+    el.addEventListener(type, fn)
+  },
+}
+
 function _getRandomColor() {
   const letters = '0123456789ABCDEF'
   let color = '#'

@@ -4,6 +4,7 @@
       <template #header>
         <p><span class="fw-bold">Vendor:</span> {{ car.vendor }}</p>
         <p><span class="fw-bold">Speed:</span> {{ car.speed }}</p>
+        <p><span class="fw-bold">Price:</span> {{ $filters.currencyUSD(car.price) }}</p>
       </template>
 
       <template #footer>

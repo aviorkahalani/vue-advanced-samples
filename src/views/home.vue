@@ -1,6 +1,8 @@
 <template>
   <section class="py-4 flex flex-col gap-2">
     <h1>Home page</h1>
+    <h1>Teleport Component</h1>
+    <notification-handler msg="it worked!" type="success" />
     <custom-card>
       <template v-slot:header>
         <h1>This is my custom header title</h1>
@@ -33,11 +35,13 @@
 
 <script>
 import customCard from '../components/custom-card.vue'
+import notificationHandler from '../components/notification-handler.vue'
 
 export default {
   name: 'home',
   components: {
     customCard,
+    notificationHandler,
   },
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <section class="car-details flex flex-col items-center gap-2">
+  <section v-if="car" class="car-details flex flex-col items-center gap-2">
     <article>
       <p><span class="fw-bold">ID:</span> {{ car.id }}</p>
       <p><span class="fw-bold">Vendor:</span> {{ car.vendor }}</p>

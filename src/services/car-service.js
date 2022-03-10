@@ -33,6 +33,7 @@ function getEmptyCar() {
   return {
     vendor: '',
     speed: 0,
+    price: 0,
   }
 }
 
@@ -40,9 +41,9 @@ function _createCars() {
   let cars = utilService.loadFromStorage(KEY)
   if (!cars || !cars.length) {
     cars = [
-      { id: utilService.makeId(), vendor: 'Fiat', speed: 30 },
-      { id: utilService.makeId(), vendor: 'Honda', speed: 87 },
-      { id: utilService.makeId(), vendor: 'Toyota', speed: 54 },
+      { id: utilService.makeId(), vendor: 'Fiat', speed: 30, price: 980 },
+      { id: utilService.makeId(), vendor: 'Honda', speed: 87, price: 500 },
+      { id: utilService.makeId(), vendor: 'Toyota', speed: 54, price: 305 },
     ]
     utilService.saveToStorage(KEY, cars)
   }
