@@ -14,7 +14,7 @@
 export default {
   name: 'color-picker',
   props: {
-    modelValue: String,
+    // modelValue: String,
   },
   data() {
     return {

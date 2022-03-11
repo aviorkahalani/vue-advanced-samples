@@ -13,15 +13,24 @@
     </pre>
     <hr />
 
-    <h1>v-model on components</h1>
-    <color-picker v-model="color" />
-    <div :style="{ backgroundColor: color }" class="fw-bold">Hello</div>
-
+    <h1 class="v-model-title">v-model on components</h1>
+    <div class="flex items-center justify-between gap-1">
+      <div class="flex flex-col text-center gap-1">
+        <color-picker v-model="color" />
+        <div :style="{ backgroundColor: color }" class="fw-bold">Hello</div>
+      </div>
+      <div class="flex-flex-col text-center">
+        <custom-dropdown v-model="section" />
+        <p>Selected Section: {{ section }}</p>
+      </div>
+    </div>
     <toggle-btn v-model="isOn" />
 
     <hr />
     <h1>custom-on directive</h1>
     <button v-custom-on:click="clicked" class="btn btn-primary">click me!</button>
+    <h2>Dynamic function</h2>
+
     <input v-custom-on:change="onChange" type="text" class="form-input" />
 
     <hr />
@@ -46,6 +55,7 @@
 <script>
 import fancyText from '../components/fancy-text.vue'
 import colorPicker from '../components/color-picker.vue'
+import customDropdown from '../components/custom-dropdown.vue'
 import toggleBtn from '../components/toggle-btn.vue'
 import helloWorld from '../components/hello-world.vue'
 import cmpA from '../components/cmp-a.vue'
@@ -57,9 +67,12 @@ export default {
     return {
       query: 'Regular v-model',
       color: '',
+      section: null,
       isOn: false,
       isShow: false,
       activeComponent: 'cmp-a',
+      fn: console.log,
+      msg: 'console.log',
     }
   },
   methods: {
@@ -74,6 +87,7 @@ export default {
   components: {
     fancyText,
     colorPicker,
+    customDropdown,
     toggleBtn,
     helloWorld,
     cmpA,
@@ -82,7 +96,12 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+.v-model-title {
+  /* use v-bind to bind css properties to cmp data */
+  color: v-bind(color);
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s ease;
