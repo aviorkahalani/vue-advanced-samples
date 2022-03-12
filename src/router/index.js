@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import home from '../views/home.vue'
 import about from '../views/about.vue'
 import carApp from '../views/car-app.vue'
@@ -6,7 +6,7 @@ import carDetails from '../views/car-details.vue'
 import carEdit from '../views/car-edit.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(),
   linkActiveClass: 'active',
   routes: [
     {

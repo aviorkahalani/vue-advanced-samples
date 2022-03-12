@@ -3,6 +3,7 @@
     <fancy-text txt="Lets try this text!" :num="'4'" :testTxt="'hello'" />
     <input
       v-focus
+      v-rainbow
       v-model="query"
       class="form-input"
       type="text"

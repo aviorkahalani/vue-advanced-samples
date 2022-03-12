@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/-vue-car-proj-vite',
+  base: '/vue-advanced-samples',
   plugins: [vue()],
   resolve: {
     alias: {
