@@ -58,7 +58,8 @@ npm run test:unit
 npm run build
 # remove the dist directory from the project’s .gitignore file
 # make sure git knows about your subtree (the subfolder with your site).
-git add dist && git commit -m "Initial dist subtree commit"
+git add dist
+git commit -m "Initial dist subtree commit"
 # use subtree push to send it to the gh-pages branch on GitHub
 git subtree push --prefix dist origin gh-pages
 
